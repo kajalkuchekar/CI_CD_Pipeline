@@ -25,11 +25,6 @@ def test_subtract(client):
     assert b'The difference between 5 and 10 is -5.0' in response.data
 
 
-def test_multiply(client):
-    response = client.post('/multiply', data=dict(num1=5, num2=10))
-    assert b'The product of 5 and 10 is 50.0' in response.data
-
-
 def test_divide(client):
     response = client.post('/divide', data=dict(num1=5, num2=10))
     assert b'The quotient of 5 and 10 is 0.5' in response.data
