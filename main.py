@@ -42,23 +42,6 @@ def subtract():
             </form>
         '''
 
-@app.route('/multiply', methods=['GET', 'POST'])
-def multiply():
-    if request.method == 'POST':
-        num1 = request.form['num1']
-        num2 = request.form['num2']
-        result = float(num1) * float(num2)
-        return 'The product of {} and {} is {}'.format(num1, num2, result)
-    else:
-        return '''
-            <form method="post">
-                <label>Number 1:</label>
-                <input type="text" name="num1"><br>
-                <label>Number 2:</label>
-                <input type="text" name="num2"><br>
-                <input type="submit" value="Multiply">
-            </form>
-        '''
 
 @app.route('/divide', methods=['GET', 'POST'])
 def divide():
